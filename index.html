@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tristan James Sintos - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+    <style>
+
+        
+      :root {
+        --icon-hover-scale: 1.2;
+        --icon-hover-color: #0d6efd;
+      }
+
+      [data-bs-theme="light"] body {
+        background-color: #ffffff;
+        color: #000000;
+      }
+
+      [data-bs-theme="dark"] body {
+        background-color: #121212;
+        color: #ffffff;
+      }
+
+      body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .profile-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        border-bottom: 2px solid #dee2e6;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+
+      .skill-icon {
+        transition: transform 0.3s ease, color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .skill-icon:hover {
+        transform: scale(var(--icon-hover-scale));
+        color: var(--icon-hover-color);
+        animation: bounce 0.6s ease;
+      }
+
+      .theme-toggle {
+        border: none;
+        background: none;
+        font-size: 1.2rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      .bg-light,
+      .bg-image-full,
+      .section {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      [data-bs-theme="light"] .bg-image-full {
+        background-image: url('https://cdn.pixabay.com/photo/2017/08/10/03/28/software-2617638_1280.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      [data-bs-theme="dark"] .bg-image-full {
+        background-image: url('https://wallpapersden.com/image/download/cybersecurity-core-wallpaper_bWZqZ2aUmZqaraWkpJRmbmdlrWZlbWU.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      [data-bs-theme="dark"] .bg-light {
+        background-color: #1e1e1e !important;
+      }
+
+      [data-bs-theme="dark"] .text-dark {
+        color: #ffffff !important;
+      }
+
+      [data-bs-theme="light"] .text-dark {
+        color: #000000 !important;
+      }
+
+      [data-bs-theme="light"] .hero-description {
+        color: #000000;
+      }
+
+      [data-bs-theme="dark"] .hero-description {
+        color: #ffffff;
+      }
+
+      [data-bs-theme="dark"] .navbar {
+        background-color: #1f1f1f !important;
+      }
+
+      [data-bs-theme="dark"] .bg-dark {
+        background-color: #1f1f1f !important;
+      }
+
+      [data-bs-theme="light"] .bg-dark {
+        background-color: #212529 !important;
+      }
+
+      footer,
+      header,
+      section {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .hero-name {
+        transition: color 0.3s ease;
+      }
+
+      [data-bs-theme="light"] .hero-name {
+        color: #000000;
+      }
+
+      [data-bs-theme="dark"] .hero-name {
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">My Personal Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item">
+              <button id="themeToggle" class="theme-toggle ms-3" title="Toggle theme">
+                <i class="bi bi-moon-stars-fill"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="py-5 bg-image-full">
+      <div class="text-center my-5">
+        <img class="profile-img mb-3" src="Profile.png" alt="Tristan James Sintos" />
+        <h1 class="fs-3 fw-bold hero-name">Tristan James Sintos</h1>
+        <p class="hero-description">Software Developer / Cyber Security Specialist</p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-5 bg-light section">
+      <div class="container">
+        <div class="mb-5">
+          <h2 class="section-title text-dark">Education</h2>
+          <ul class="list-unstyled ps-3">
+            <li>• Bachelor of Science in Information Technology, Ateneo de Davao University (2021 - Present)</li>
+          </ul>
+        </div>
+
+        <div id="projects" class="mb-5">
+          <h2 class="section-title text-dark">Projects</h2>
+          <ul class="list-unstyled ps-3">
+            <li><strong>• Java Library System</strong> – GUI for library inventory</li>
+            <li><strong>• Business Website</strong> – Official website of the Ateneo De Davao Entrepreneurship students</li>
+          </ul>
+        </div>
+
+        <div id="skills" class="mb-5">
+          <h2 class="section-title text-dark">Skills</h2>
+          <div class="d-flex flex-wrap gap-4 ps-3 align-items-center">
+            <i class="devicon-html5-plain colored fs-1 skill-icon" data-bs-toggle="tooltip" title="HTML"></i>
+            <i class="devicon-css3-plain colored fs-1 skill-icon" data-bs-toggle="tooltip" title="CSS"></i>
+            <i class="devicon-javascript-plain colored fs-1 skill-icon" data-bs-toggle="tooltip" title="JavaScript"></i>
+            <i class="devicon-python-plain colored fs-1 skill-icon" data-bs-toggle="tooltip" title="Python"></i>
+            <i class="devicon-git-plain colored fs-1 skill-icon" data-bs-toggle="tooltip" title="Git"></i>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Cisco_logo_blue_2016.svg"
+              alt="Cisco"
+              title="Cisco Networking"
+              data-bs-toggle="tooltip"
+              class="skill-icon"
+              style="height: 40px; transition: transform 0.3s ease, filter 0.3s ease; cursor: pointer;"
+            />
+          </div>
+        </div>
+
+        <div class="mb-5">
+          <h2 class="section-title text-dark">Affiliations</h2>
+          <p class="ps-3">Access Club</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background Banner -->
+    <div class="py-5 bg-image-full"></div>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white text-center">
+      <div class="container">
+        <p class="mb-0">© Tristan James Sintos 2025</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS + Theme Toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        themeToggle.addEventListener('click', () => {
+          const html = document.documentElement;
+          const currentTheme = html.getAttribute('data-bs-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          html.setAttribute('data-bs-theme', newTheme);
+          icon.classList.toggle('bi-moon-stars-fill');
+          icon.classList.toggle('bi-sun-fill');
+        });
+      });
+    </script>
+  </body>
+</html>
